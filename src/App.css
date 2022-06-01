@@ -33,7 +33,7 @@ h3 {
 
 input {
   border: none;
-  border-bottom: 1px solid orange;
+  border-bottom: 1px dashed orange;
 }
 
 button {
