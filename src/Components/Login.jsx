@@ -13,6 +13,12 @@ export default class Login extends React.Component {
     }
 
     checkLogin = () => {
+        const { user, password } = this.state;
+        if (user === "admin" && password === "admin"){
+            alert("Login successful!!!");
+        } else {
+            alert("Access denied!");
+        }
         this.setState({
             user: '',
             password: '',
@@ -28,15 +34,15 @@ export default class Login extends React.Component {
             type="text"
             placeholder="Digite seu usuário"
             name="user"
-            onChange={ this.handleChange }
             value={ user }
+            onChange={ this.handleChange }
           ></input>
           <input
             type="password"
             placeholder="Digite sua senha"
             name="password"
-            onChange={ this.handleChange }
             value={ password }
+            onChange={ this.handleChange }
           ></input>
           <button
             type="button"
